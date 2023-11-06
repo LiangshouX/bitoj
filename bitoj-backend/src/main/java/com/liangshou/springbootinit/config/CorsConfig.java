@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.config;
+package com.liangshou.springbootinit.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

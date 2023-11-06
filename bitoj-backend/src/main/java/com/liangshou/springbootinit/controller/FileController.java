@@ -1,16 +1,16 @@
-package com.yupi.springbootinit.controller;
+package com.liangshou.springbootinit.controller;
 
 import cn.hutool.core.io.FileUtil;
-import com.yupi.springbootinit.common.BaseResponse;
-import com.yupi.springbootinit.common.ErrorCode;
-import com.yupi.springbootinit.common.ResultUtils;
-import com.yupi.springbootinit.constant.FileConstant;
-import com.yupi.springbootinit.exception.BusinessException;
-import com.yupi.springbootinit.manager.CosManager;
-import com.yupi.springbootinit.model.dto.file.UploadFileRequest;
-import com.yupi.springbootinit.model.entity.User;
-import com.yupi.springbootinit.model.enums.FileUploadBizEnum;
-import com.yupi.springbootinit.service.UserService;
+import com.liangshou.springbootinit.common.BaseResponse;
+import com.liangshou.springbootinit.common.ErrorCode;
+import com.liangshou.springbootinit.common.ResultUtils;
+import com.liangshou.springbootinit.constant.FileConstant;
+import com.liangshou.springbootinit.exception.BusinessException;
+import com.liangshou.springbootinit.manager.CosManager;
+import com.liangshou.springbootinit.model.dto.file.UploadFileRequest;
+import com.liangshou.springbootinit.model.entity.User;
+import com.liangshou.springbootinit.model.enums.FileUploadBizEnum;
+import com.liangshou.springbootinit.service.UserService;
 import java.io.File;
 import java.util.Arrays;
 import javax.annotation.Resource;

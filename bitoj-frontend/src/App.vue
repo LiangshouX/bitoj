@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <a-calendar v-model="value" />
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-
+<!--  <img alt="Vue logo" src="./assets/logo.png">-->
+<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+  <div id="app">
+    <BasicLayout />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import BasicLayout from "@/layouts/BasicLayout.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld,
+    BasicLayout
   }
 }
 </script>

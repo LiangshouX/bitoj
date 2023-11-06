@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.config;
+package com.liangshou.springbootinit.config;
 
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

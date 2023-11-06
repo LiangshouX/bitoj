@@ -1,6 +1,6 @@
-package com.yupi.springbootinit.common;
+package com.liangshou.springbootinit.common;
 
-import com.yupi.springbootinit.constant.CommonConstant;
+import com.liangshou.springbootinit.constant.CommonConstant;
 import lombok.Data;
 
 /**

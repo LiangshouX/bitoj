@@ -1,11 +1,5 @@
-<script setup>
-
-</script>
-
 <template>
-  $END$
+  <div class="home">你没权限</div>
 </template>
 
-<style scoped>
-
-</style>
+<script lang="ts"></script>

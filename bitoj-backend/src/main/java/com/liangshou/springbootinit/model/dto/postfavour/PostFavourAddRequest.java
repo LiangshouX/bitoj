@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.model.dto.postfavour;
+package com.liangshou.springbootinit.model.dto.postfavour;
 
 import java.io.Serializable;
 import lombok.Data;

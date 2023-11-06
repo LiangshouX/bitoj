@@ -1,13 +1,13 @@
-package com.yupi.springbootinit.controller;
+package com.liangshou.springbootinit.controller;
 
-import com.yupi.springbootinit.common.BaseResponse;
-import com.yupi.springbootinit.common.ErrorCode;
-import com.yupi.springbootinit.common.ResultUtils;
-import com.yupi.springbootinit.exception.BusinessException;
-import com.yupi.springbootinit.model.dto.postthumb.PostThumbAddRequest;
-import com.yupi.springbootinit.model.entity.User;
-import com.yupi.springbootinit.service.PostThumbService;
-import com.yupi.springbootinit.service.UserService;
+import com.liangshou.springbootinit.common.BaseResponse;
+import com.liangshou.springbootinit.common.ErrorCode;
+import com.liangshou.springbootinit.common.ResultUtils;
+import com.liangshou.springbootinit.exception.BusinessException;
+import com.liangshou.springbootinit.model.dto.postthumb.PostThumbAddRequest;
+import com.liangshou.springbootinit.model.entity.User;
+import com.liangshou.springbootinit.service.PostThumbService;
+import com.liangshou.springbootinit.service.UserService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;

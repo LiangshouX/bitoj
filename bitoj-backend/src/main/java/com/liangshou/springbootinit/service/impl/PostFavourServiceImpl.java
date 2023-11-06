@@ -1,18 +1,19 @@
-package com.yupi.springbootinit.service.impl;
+package com.liangshou.springbootinit.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.yupi.springbootinit.common.ErrorCode;
-import com.yupi.springbootinit.exception.BusinessException;
-import com.yupi.springbootinit.mapper.PostFavourMapper;
-import com.yupi.springbootinit.model.entity.Post;
-import com.yupi.springbootinit.model.entity.PostFavour;
-import com.yupi.springbootinit.model.entity.User;
-import com.yupi.springbootinit.service.PostFavourService;
-import com.yupi.springbootinit.service.PostService;
+import com.liangshou.springbootinit.common.ErrorCode;
+import com.liangshou.springbootinit.mapper.PostFavourMapper;
+import com.liangshou.springbootinit.model.entity.Post;
+import com.liangshou.springbootinit.model.entity.PostFavour;
+import com.liangshou.springbootinit.model.entity.User;
+import com.liangshou.springbootinit.service.PostFavourService;
+import com.liangshou.springbootinit.service.PostService;
+import com.liangshou.springbootinit.exception.BusinessException;
+
 import javax.annotation.Resource;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;

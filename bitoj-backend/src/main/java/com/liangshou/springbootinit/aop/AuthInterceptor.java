@@ -1,11 +1,12 @@
-package com.yupi.springbootinit.aop;
+package com.liangshou.springbootinit.aop;
 
-import com.yupi.springbootinit.annotation.AuthCheck;
-import com.yupi.springbootinit.common.ErrorCode;
-import com.yupi.springbootinit.exception.BusinessException;
-import com.yupi.springbootinit.model.entity.User;
-import com.yupi.springbootinit.model.enums.UserRoleEnum;
-import com.yupi.springbootinit.service.UserService;
+import com.liangshou.springbootinit.annotation.AuthCheck;
+import com.liangshou.springbootinit.common.ErrorCode;
+import com.liangshou.springbootinit.model.entity.User;
+import com.liangshou.springbootinit.model.enums.UserRoleEnum;
+import com.liangshou.springbootinit.service.UserService;
+import com.liangshou.springbootinit.exception.BusinessException;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;

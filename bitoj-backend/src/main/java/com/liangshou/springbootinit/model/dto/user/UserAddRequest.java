@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.model.dto.user;
+package com.liangshou.springbootinit.model.dto.user;
 
 import java.io.Serializable;
 import lombok.Data;

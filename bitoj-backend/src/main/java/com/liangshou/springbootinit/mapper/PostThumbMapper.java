@@ -1,6 +1,6 @@
-package com.yupi.springbootinit.mapper;
+package com.liangshou.springbootinit.mapper;
 
-import com.yupi.springbootinit.model.entity.PostThumb;
+import com.liangshou.springbootinit.model.entity.PostThumb;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

@@ -1,8 +1,9 @@
-package com.yupi.springbootinit.model.vo;
+package com.liangshou.springbootinit.model.vo;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.yupi.springbootinit.model.entity.Post;
+import com.liangshou.springbootinit.model.entity.Post;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;

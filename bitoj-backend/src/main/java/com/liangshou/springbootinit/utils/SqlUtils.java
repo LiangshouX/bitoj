@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.utils;
+package com.liangshou.springbootinit.utils;
 
 import org.apache.commons.lang3.StringUtils;
 

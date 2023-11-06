@@ -1,28 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <a-calendar v-model="value" />
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="basicLayout">
+    <a-layout style="height: 400px;">
 
+      <a-layout-header class="header">
+        <GlobalHeader/>
+      </a-layout-header>
+
+      <a-layout-content class="content">
+        Content
+
+      </a-layout-content>
+
+      <a-layout-footer class="footer">Programmed By: 南诏国小公主</a-layout-footer>
+    </a-layout>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<style scoped>
+#basicLayout{
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
 }
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#basicLayout .header{
+  background: aqua;
+  margin-bottom: 16px;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //text-align: center;
+}
+
+#basicLayout .content{
+  background: linear-gradient(to right, #aaa, #fff);
+  margin-bottom: 16px;
+}
+
+#basicLayout .footer{
+  background: aqua;
+  padding: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
+
+<script setup>
+import GlobalHeader from "@/components/GlobalHeader.vue";
+</script>

@@ -1,6 +1,6 @@
-package com.yupi.springbootinit.exception;
+package com.liangshou.springbootinit.exception;
 
-import com.yupi.springbootinit.common.ErrorCode;
+import com.liangshou.springbootinit.common.ErrorCode;
 
 /**
  * 抛异常工具类

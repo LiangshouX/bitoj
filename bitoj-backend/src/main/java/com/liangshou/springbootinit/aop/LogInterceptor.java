@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.aop;
+package com.liangshou.springbootinit.aop;
 
 import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;

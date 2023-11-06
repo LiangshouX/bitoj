@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.constant;
+package com.liangshou.springbootinit.constant;
 
 /**
  * 用户常量

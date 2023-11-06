@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.wxmp.handler;
+package com.liangshou.springbootinit.wxmp.handler;
 
 import java.util.Map;
 import me.chanjar.weixin.common.error.WxErrorException;
