@@ -1,10 +1,28 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <!--    <router-link to="/">Home</router-link>-->
+    <!--    |-->
+    <!--    <router-link to="/about">About</router-link>-->
+    <BasicLayout />
   </nav>
-  <router-view />
+  <!--  <router-view />-->
 </template>
+
+<script>
+import { ref } from "vue";
+import BasicLayout from "@/layouts/BasicLayout.vue";
+
+export default {
+  components: { BasicLayout },
+  setup() {
+    const value = ref(new Date("2023-01-01"));
+
+    return {
+      value,
+    };
+  },
+};
+</script>
 
 <style>
 #app {
