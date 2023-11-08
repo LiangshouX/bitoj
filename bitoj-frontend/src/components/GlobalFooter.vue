@@ -28,12 +28,12 @@ export default {
 .global-footer {
   background-color: aquamarine;
   color: #fff;
-  padding: 16px 0;
+  padding: 16px;
   text-align: center;
-  position: absolute;
+  position: sticky;
   bottom: 0;
-  left: 0;
-  right: 0;
+  //left: 0;
+  //right: 0;
 }
 
 .footer-content {

@@ -1,6 +1,6 @@
 <template>
   <div id="basicLayout">
-    <a-layout style="height: 400px">
+    <a-layout style="min-height: 100vh">
       <a-layout-header class="header">
         <GlobalHeader />
       </a-layout-header>
@@ -19,22 +19,13 @@
 }
 
 #basicLayout .header {
-  //background: aqua; margin-bottom: 16px; padding: 16px; //position: absolute; //top: 0; //left: 0; //right: 0; //text-align: center;
+  margin-bottom: 16px;
 }
 
 #basicLayout .content {
   background: linear-gradient(to right, #aaa, #fff);
-  margin-bottom: 16px;
-}
-
-#basicLayout .footer {
-  background: aquamarine;
-  padding: 12px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+  margin-bottom: 8px;
+  width: 100%;
 }
 </style>
 
