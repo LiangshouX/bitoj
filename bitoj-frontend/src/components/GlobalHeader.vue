@@ -1,52 +1,37 @@
 <template>
-  <a-row
-    id="globalHeader"
-    class="globalHeader"
-    align="center"
-    style="margin-bottom: 16px"
-    :wrap="false"
-  >
-    <a-col flex="100px">
-      <div>100px</div>
-    </a-col>
+  <a-row id="globalHeader" align="center" :wrap="false">
     <a-col flex="auto">
-      <div>
-        <a-menu
-          mode="horizontal"
-          :selected-keys="selectedKeys"
-          @menu-item-click="doMenuClick"
+      <a-menu
+        mode="horizontal"
+        :selected-keys="selectedKeys"
+        @menu-item-click="doMenuClick"
+      >
+        <a-menu-item
+          key="0"
+          :style="{ padding: 0, marginRight: '38px' }"
+          disabled
         >
-          <a-menu-item
-            key="0"
-            :style="{ padding: 0, marginRight: '38px' }"
-            disabled
-          >
-            <div class="title-bar">
-              <img class="logo" src="../assets/logo.png" />
-              <div class="title">BIT OJ</div>
-            </div>
-          </a-menu-item>
-
-          <a-menu-item v-for="item in visibleRoutes" :key="item.path">
-            {{ item.name }}
-          </a-menu-item>
-
-          <!--      <a-menu-item key="1">Home</a-menu-item>-->
-          <!--      <a-menu-item key="2">Solution</a-menu-item>-->
-          <!--      <a-menu-item key="3">Cloud Service</a-menu-item>-->
-          <!--      <a-menu-item key="4">Cooperation</a-menu-item>-->
-        </a-menu>
-      </div>
+          <div class="title-bar">
+            <img class="logo" src="../assets/logo.png" />
+            <div class="title">鱼 OJ</div>
+          </div>
+        </a-menu-item>
+        <a-menu-item v-for="item in visibleRoutes" :key="item.path">
+          {{ item.name }}
+        </a-menu-item>
+      </a-menu>
     </a-col>
     <a-col flex="100px">
-      <div>{{ store.state.user?.loginUser?.userName ?? "未登录" }}</div>
+      <div>
+        {{ store.state.user?.loginUser?.userName ?? "NULL" }}
+      </div>
     </a-col>
   </a-row>
 </template>
 
 <script setup lang="ts">
-import { routes } from "@/router/routes";
-import { useRouter } from "vue-router";
+import { routes } from "../router/routes";
+import { useRoute, useRouter } from "vue-router";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 import checkAccess from "@/access/checkAccess";
@@ -62,10 +47,13 @@ const visibleRoutes = computed(() => {
       return false;
     }
     // 根据权限过滤菜单
-    return checkAccess(
-      store.state.user.loginUser,
-      item?.meta?.access as string
-    );
+    console.log("测试store.state", store.state.user.loginUser.userName);
+    if (
+      !checkAccess(store.state.user.loginUser, item?.meta?.access as string)
+    ) {
+      return false;
+    }
+    return true;
   });
 });
 
@@ -77,7 +65,10 @@ router.afterEach((to, from, failure) => {
   selectedKeys.value = [to.path];
 });
 
-console.log();
+console.log(
+  "不在visible里面的 store.state",
+  store.state.user.loginUser.userName
+);
 
 setTimeout(() => {
   store.dispatch("user/getLoginUser", {
@@ -94,28 +85,17 @@ const doMenuClick = (key: string) => {
 </script>
 
 <style scoped>
-.globalHeader {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 1px;
-  background-color: var(--color-neutral-2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 .title-bar {
   display: flex;
   align-items: center;
 }
 
 .title {
-  color: black;
+  color: #444;
   margin-left: 16px;
 }
 
 .logo {
-  height: 32px;
+  height: 48px;
 }
 </style>

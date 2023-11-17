@@ -4,9 +4,11 @@
       <a-layout-header class="header">
         <GlobalHeader />
       </a-layout-header>
+
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
+
       <a-layout-footer class="footer">
         <GlobalFooter />
       </a-layout-footer>
@@ -16,10 +18,6 @@
 
 <style scoped>
 #basicLayout {
-}
-
-#basicLayout .header {
-  margin-bottom: 16px;
 }
 
 #basicLayout .content {

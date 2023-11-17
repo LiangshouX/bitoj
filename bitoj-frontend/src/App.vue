@@ -1,22 +1,21 @@
 <template>
-  <nav>
-    <!--    <router-link to="/">Home</router-link>-->
-    <!--    |-->
-    <!--    <router-link to="/about">About</router-link>-->
-    <BasicLayout />
-  </nav>
-  <!--  <router-view />-->
+  <div id="app">
+    <template v-if="router.currentRoute.value.path.startsWith('/user')">
+      <router-view />
+    </template>
+    <template v-else>
+      <BasicLayout />
+    </template>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import BasicLayout from "@/layouts/BasicLayout.vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 
 const router = useRouter();
-const store = useStore();
-
+useStore();
 /**
  * 全局初始化函数，有全局单次调用的代码，都可以写到这里
  */
