@@ -1,8 +1,14 @@
 package com.liangshou.bitoj.model.vo;
 
+import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.liangshou.bitoj.model.dto.question.JudgeConfig;
 import com.liangshou.bitoj.model.entity.Post;
+import com.liangshou.bitoj.model.entity.Question;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
@@ -11,10 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 帖子视图
- *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
+ * 题目封装类
  */
 @Data
 public class QuestionVO implements Serializable {
@@ -24,96 +27,137 @@ public class QuestionVO implements Serializable {
     /**
      * id
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
      * 标题
      */
+    @TableField(value = "title")
     private String title;
 
     /**
      * 内容
      */
+    @TableField(value = "content")
     private String content;
+
+    /**
+     * 标签列表（json 数组）
+     */
+    @TableField(value = "tags")
+    private List<String> tags;
+
+    /**
+     * 题目提交数
+     */
+    @TableField(value = "submitNum")
+    private Integer submitNum;
+
+    /**
+     * 题目通过数
+     */
+    @TableField(value = "acceptedNum")
+    private Integer acceptedNum;
+
+
+    /**
+     * 判题配置（json 对象）
+     */
+    @TableField(value = "judgeConfig")
+    private JudgeConfig judgeConfig;
 
     /**
      * 点赞数
      */
+    @TableField(value = "thumbNum")
     private Integer thumbNum;
 
     /**
      * 收藏数
      */
+    @TableField(value = "favourNum")
     private Integer favourNum;
 
     /**
      * 创建用户 id
      */
+    @TableField(value = "userId")
     private Long userId;
 
     /**
      * 创建时间
      */
+    @TableField(value = "createTime")
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @TableField(value = "updateTime")
     private Date updateTime;
 
     /**
-     * 标签列表
+     * 是否删除
      */
-    private List<String> tagList;
+    @TableField(value = "isDelete")
+    private Integer isDelete;
 
     /**
-     * 创建人信息
+     * 创建题目人的信息
      */
-    private UserVO user;
+    private UserVO userVO;
 
-    /**
-     * 是否已点赞
-     */
-    private Boolean hasThumb;
-
-    /**
-     * 是否已收藏
-     */
-    private Boolean hasFavour;
 
     /**
      * 包装类转对象
      *
-     * @param postVO
-     * @return
+     * @param questionVO Question包装类
+     * @return Question对象
      */
-    public static Post voToObj(QuestionVO postVO) {
-        if (postVO == null) {
+    public static Question voToObj(QuestionVO questionVO) {
+        if (questionVO == null) {
             return null;
         }
-        Post post = new Post();
-        BeanUtils.copyProperties(postVO, post);
-        List<String> tagList = postVO.getTagList();
-        if (tagList != null) {
-            post.setTags(GSON.toJson(tagList));
+
+        Question question = new Question();
+        BeanUtils.copyProperties(questionVO, question);
+        List<String> tagList = questionVO.getTags();
+
+        if(tagList != null){
+            question.setTags(JSONUtil.toJsonStr(tagList));
         }
-        return post;
+
+        JudgeConfig voJudgeConfig = questionVO.getJudgeConfig();
+
+        if(voJudgeConfig != null){
+            question.setJudgeConfig(JSONUtil.toJsonStr(voJudgeConfig));
+        }
+
+        return question;
     }
 
     /**
      * 对象转包装类
      *
-     * @param post
-     * @return
+     * @param question Question对象
+     * @return QuestionVO包装类
      */
-    public static QuestionVO objToVo(Post post) {
-        if (post == null) {
+    public static QuestionVO objToVo(Question question) {
+        if (question == null) {
             return null;
         }
-        QuestionVO postVO = new QuestionVO();
-        BeanUtils.copyProperties(post, postVO);
-        postVO.setTagList(GSON.fromJson(post.getTags(), new TypeToken<List<String>>() {
-        }.getType()));
-        return postVO;
+
+        QuestionVO questionVO = new QuestionVO();
+        BeanUtils.copyProperties(question, questionVO);
+        List<String> tagList = JSONUtil.toList(question.getTags(), String.class);
+        questionVO.setTags(tagList);
+
+        String judgeConfigStr = question.getJudgeConfig();
+        questionVO.setJudgeConfig(JSONUtil.toBean(judgeConfigStr, JudgeConfig.class));
+
+        return questionVO;
     }
+
+    private static final long serialVersionUID = 1L;
 }

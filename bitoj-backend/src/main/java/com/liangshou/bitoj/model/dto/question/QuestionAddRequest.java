@@ -30,7 +30,7 @@ public class QuestionAddRequest implements Serializable {
      * 标签列表（json 数组）
      */
     @TableField(value = "tags")
-    private String tags;
+    private List<String> tags;
 
     /**
      * 题目答案
@@ -50,7 +50,7 @@ public class QuestionAddRequest implements Serializable {
      */
     @TableField(value = "judgeConfig")
     private JudgeConfig judgeConfig;
-    
+
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;

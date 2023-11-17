@@ -11,8 +11,8 @@ import com.liangshou.bitoj.model.vo.QuestionSubmitVO;
 
 /**
 * @author X-L-S
-* @description 针对表【question_submit(题目提交)】的数据库操作Service
-* @createDate 2023-11-17 15:42:43
+* {@code @description} 针对表【question_submit(题目提交)】的数据库操作Service
+* {@code @createDate} 2023-11-17 15:42:43
 */
 public interface QuestionSubmitService extends IService<QuestionSubmit> {
     /**

@@ -14,8 +14,8 @@ import org.springframework.stereotype.Service;
 
 /**
 * @author X-L-S
-* @description 针对表【question_submit(题目提交)】的数据库操作Service实现
-* @createDate 2023-11-17 15:42:43
+* {@code @description} 针对表【question_submit(题目提交)】的数据库操作Service实现
+* {@code @createDate} 2023-11-17 15:42:43
 */
 @Service
 public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper, QuestionSubmit>
