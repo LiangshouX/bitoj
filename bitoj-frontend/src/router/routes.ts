@@ -1,11 +1,14 @@
 import { RouteRecordRaw } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
+import ExampleView from "@/views/ExampleView.vue";
 import AdminView from "@/views/AdminView.vue";
 import { meta } from "@typescript-eslint/parser";
 import NoAuthView from "@/views/NoAuthView.vue";
 import ACCESS_ENUM from "@/access/accessEnum";
 import UserLoginView from "@/views/user/UserLoginView.vue";
 import UserLayout from "@/layouts/UserLayout.vue";
+import UserRegisterView from "@/views/user/UserRegisterView.vue";
+import ManageQuestionView from "@/views/question/ManageQuestionView.vue";
+import AddQuestionView from "@/views/question/AddQuestionView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -21,18 +24,42 @@ export const routes: Array<RouteRecordRaw> = [
       {
         path: "/user/register",
         name: "用户注册",
-        component: UserLoginView,
+        component: UserRegisterView,
       },
     ],
     meta: {
       hideInMenu: true,
     },
   },
+  {
+    path: "/add/question",
+    name: "创建题目",
+    component: AddQuestionView,
+    // meta: {
+    //   access: ACCESS_ENUM.ADMIN,
+    // },
+  },
+  {
+    path: "/update/question",
+    name: "更新题目",
+    component: AddQuestionView,
+    // meta: {
+    //   access: ACCESS_ENUM.ADMIN,
+    // },
+  },
+  {
+    path: "/manage/question/",
+    name: "管理题目",
+    component: ManageQuestionView,
+    // meta: {
+    //   access: ACCESS_ENUM.ADMIN,
+    // },
+  },
 
   {
     path: "/",
     name: "浏览题目",
-    component: HomeView,
+    component: ExampleView,
   },
   {
     path: "/noAuth",

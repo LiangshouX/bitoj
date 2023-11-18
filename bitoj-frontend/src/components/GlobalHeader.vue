@@ -13,7 +13,7 @@
         >
           <div class="title-bar">
             <img class="logo" src="../assets/logo.png" />
-            <div class="title">鱼 OJ</div>
+            <div class="title">BIT OJ</div>
           </div>
         </a-menu-item>
         <a-menu-item v-for="item in visibleRoutes" :key="item.path">
@@ -30,12 +30,13 @@
 </template>
 
 <script setup lang="ts">
-import { routes } from "../router/routes";
+import { routes } from "@/router/routes";
 import { useRoute, useRouter } from "vue-router";
 import { computed, ref } from "vue";
 import { useStore } from "vuex";
 import checkAccess from "@/access/checkAccess";
 import ACCESS_ENUM from "@/access/accessEnum";
+import * as stream from "stream";
 
 const router = useRouter();
 const store = useStore();
@@ -48,12 +49,10 @@ const visibleRoutes = computed(() => {
     }
     // 根据权限过滤菜单
     console.log("测试store.state", store.state.user.loginUser.userName);
-    if (
-      !checkAccess(store.state.user.loginUser, item?.meta?.access as string)
-    ) {
-      return false;
-    }
-    return true;
+    return checkAccess(
+      store.state.user.loginUser,
+      item?.meta?.access as string
+    );
   });
 });
 
@@ -69,14 +68,14 @@ console.log(
   "不在visible里面的 store.state",
   store.state.user.loginUser.userName
 );
-
-setTimeout(() => {
-  store.dispatch("user/getLoginUser", {
-    userName: "管理员",
-    userRole: ACCESS_ENUM.ADMIN,
-  });
-}, 3000);
-
+//
+// setTimeout(() => {
+//   store.dispatch("user/getLoginUser", {
+//     userName: "管理员",
+//     userRole: ACCESS_ENUM.ADMIN,
+//   });
+// }, 3000);
+// console.log("setTimeout函数执行后：\t", store.state.user?.loginUser?.userName);
 const doMenuClick = (key: string) => {
   router.push({
     path: key,
