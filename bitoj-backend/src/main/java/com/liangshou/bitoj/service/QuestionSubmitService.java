@@ -19,21 +19,19 @@ public interface QuestionSubmitService extends IService<QuestionSubmit> {
      * 题目提交
      *
      * @param questionSubmitAddRequest 题目提交信息
-     * @param loginUser
-     * @return
+     * @param loginUser 登录的用户
      */
     long doQuestionSubmit(QuestionSubmitAddRequest questionSubmitAddRequest, User loginUser);
 
     /**
-     * 获取查询条件
+     * 获取查询包装类 （用户根据哪些字段查询；根据前端传来的请求对象，得到 MyBatis 框架支持的查询 QueryWrapper 类）
      *
-     * @param questionSubmitQueryRequest
-     * @return
+     * @param questionSubmitQueryRequest 查询请求
      */
     QueryWrapper<QuestionSubmit> getQueryWrapper(QuestionSubmitQueryRequest questionSubmitQueryRequest);
 
     /**
-     * 获取题目封装
+     * 获取题目封装类
      *
      * @param questionSubmit 提交实体
      * @param loginUser 登录的用户
@@ -43,9 +41,8 @@ public interface QuestionSubmitService extends IService<QuestionSubmit> {
     /**
      * 分页获取题目封装
      *
-     * @param questionSubmitPage
-     * @param loginUser
-     * @return
+     * @param questionSubmitPage 提交页
+     * @param loginUser 登录用户
      */
     Page<QuestionSubmitVO> getQuestionSubmitVOPage(Page<QuestionSubmit> questionSubmitPage, User loginUser);
 

@@ -10,7 +10,7 @@ import lombok.Data;
 
 /**
  * 题目提交
- * @TableName question_submit
+ * {@code @TableName} question_submit
  */
 @TableName(value ="question_submit")
 @Data
@@ -18,7 +18,7 @@ public class QuestionSubmit implements Serializable {
     /**
      * id
      */
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     private Long id;
 
     /**

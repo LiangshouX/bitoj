@@ -1,15 +1,15 @@
 package com.liangshou.bitoj.model.dto.questionsubmit;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.liangshou.bitoj.common.PageRequest;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.io.Serializable;
-import java.util.Date;
 
 @Data
-public class QuestionSubmitQueryRequest implements Serializable {
+@EqualsAndHashCode(callSuper = true)
+public class QuestionSubmitQueryRequest extends PageRequest implements Serializable {
 
     /**
      * 编程语言

@@ -1,11 +1,13 @@
 package com.liangshou.bitoj.model.enums;
 
+import lombok.Getter;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public enum QuestionSubmitLanguageEnum {
     JAVA("java", "java"),
     CPLUSPLUS("c++", "c++"),
@@ -44,14 +46,6 @@ public enum QuestionSubmitLanguageEnum {
             }
         }
         return null;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public String getText() {
-        return text;
     }
 
 }

@@ -1,5 +1,6 @@
 package com.liangshou.bitoj.model.enums;
 
+import lombok.Getter;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.Arrays;
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
  *
  */
 
+@Getter
 public enum QuestionSubmitStatusEnum {
     // 0 - 待判题、1 - 判题中、2 - 成功、3 - 失败
     WAITING("等待中", 0),
@@ -52,14 +54,6 @@ public enum QuestionSubmitStatusEnum {
             }
         }
         return null;
-    }
-
-    public Integer getValue() {
-        return value;
-    }
-
-    public String getText() {
-        return text;
     }
 
 }
