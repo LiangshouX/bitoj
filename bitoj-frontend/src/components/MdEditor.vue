@@ -3,19 +3,22 @@
     :value="value"
     :mode="mode"
     :plugins="plugins"
+    :locale="locale"
     @change="handleChange"
   />
 </template>
 
 <script setup lang="ts">
-import "bytemd/dist/index.css";
 import gfm from "@bytemd/plugin-gfm";
+import { Editor } from "@bytemd/vue-next";
+import { withDefaults, defineProps } from "vue";
+import locale from "bytemd/locales/zh_Hans.json";
+import gemoji from "@bytemd/plugin-gemoji";
+import math from "@bytemd/plugin-math";
 import highlight from "@bytemd/plugin-highlight";
-import { Editor, Viewer } from "@bytemd/vue-next";
-import { ref, withDefaults, defineProps } from "vue";
 
 /**
- * 定义组件属性插件
+ * 定义组件属性类型，外层传入数据
  */
 interface Props {
   value: string;
@@ -24,19 +27,21 @@ interface Props {
 }
 
 const plugins = [
-  gfm(),
+  gfm({}),
   highlight(),
-  // Add more plugins here
+  // 中文显示
+  math({}),
+  gemoji(),
 ];
-
 /**
- * 给组件指定初始值
+ * 属性默认值
  */
 const props = withDefaults(defineProps<Props>(), {
-  value: () => " ",
+  value: () => "",
   mode: () => "split",
   handleChange: (v: string) => {
-    console.log(v);
+    // console.log(v);
+    return "";
   },
 });
 </script>

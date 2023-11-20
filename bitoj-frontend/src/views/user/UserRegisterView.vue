@@ -1,6 +1,6 @@
 <template>
   <div id="userLoginView">
-    <h1 style="margin: 32px 0">新手上线 猫 OJ 判题系统</h1>
+    <h1 style="margin: 32px 0">新手上线 BIT OJ 系统</h1>
     <a-form
       style="max-width: 320px; margin: 0 auto"
       label-align="left"
@@ -19,6 +19,20 @@
       >
         <a-input v-model="form.userAccount" placeholder="请输入账号" />
       </a-form-item>
+
+      <!--      <a-form-item-->
+      <!--        required-->
+      <!--        field="userName"-->
+      <!--        label="用户名"-->
+      <!--        tooltip="用户名不少于 1 位"-->
+      <!--        :rules="[-->
+      <!--          { required: true, message: '用户名不能为空' },-->
+      <!--          { minLength: 4, message: '用户名长度不能低于1位' },-->
+      <!--        ]"-->
+      <!--      >-->
+      <!--        <a-input v-model="form.userAccount" placeholder="请输入用户名" />-->
+      <!--      </a-form-item>-->
+
       <a-form-item
         required
         field="userPassword"

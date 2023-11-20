@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <template v-if="router.currentRoute.value.path.startsWith('/user')">
+    <template v-if="route.path.startsWith('/user')">
       <router-view />
     </template>
     <template v-else>
@@ -9,40 +9,40 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import BasicLayout from "@/layouts/BasicLayout.vue";
-import { useRouter } from "vue-router";
-import { useStore } from "vuex";
-
-const router = useRouter();
-useStore();
-/**
- * 全局初始化函数，有全局单次调用的代码，都可以写到这里
- */
-const doInit = () => {
-  console.log("hello 欢迎来到我的项目");
-};
-</script>
-
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  //text-align: center;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>
+<script setup lang="ts">
+import BasicLayout from "@/layouts/BasicLayout.vue";
+import { onMounted } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+/**
+ * todo 全局初始化函数，有全局单次调用的代码，都可以写到这里
+ */
+const doInit = () => {
+  console.log(
+    "       _                        \n" +
+      "       \\`*-.                    \n" +
+      "        )  _`-.                 \n" +
+      "       .  : `. .                \n" +
+      "       : _   '  \\               \n" +
+      "       ; *` _.   `*-._          \n" +
+      "       `-.-'          `-.       \n" +
+      "         ;       `       `.     \n" +
+      "         :.       .        \\    \n" +
+      "         . \\  .   :   .-'   .   \n" +
+      "         '  `+.;  ;  '      :   \n" +
+      "         :  '  |    ;       ;-. \n" +
+      "         ; '   : :`-:     _.`* ;\n" +
+      "[Cat] .*' /  .*' ; .*`- +'  `*' \n" +
+      "      `*-*   `*-*  `*-*'"
+  );
+};
+
+onMounted(() => {
+  doInit();
+});
+</script>

@@ -14,7 +14,7 @@
       <template #optional="{ record }">
         <a-space>
           <a-button type="primary" @click="doUpdate(record)"> 修改</a-button>
-          <a-button status="danger" @click="doDelete(record)">删除</a-button>
+          <a-button status="danger" @click="doDelete(record)"> 删除</a-button>
         </a-space>
       </template>
     </a-table>

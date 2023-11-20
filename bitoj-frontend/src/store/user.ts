@@ -7,12 +7,11 @@ export default {
   namespaced: true,
   state: () => ({
     loginUser: {
-      userName: "管理员账号",
-      userRole: ACCESS_ENUM.ADMIN,
+      userName: "未登录",
     },
   }),
   actions: {
-    async getLoginUser({ commit, state }, payload) {
+    async getLoginUser({ commit, state }) {
       // 从远程请求获取登录信息
       const res = await UserControllerService.getLoginUserUsingGet();
       if (res.code === 0) {
