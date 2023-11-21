@@ -1,4 +1,4 @@
-package com.liangshou.bitoj.model.dto.questionsubmit;
+package com.liangshou.bitoj.judge.codesandbox.model;
 
 import lombok.Data;
 

@@ -5,18 +5,13 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.liangshou.bitoj.model.dto.question.JudgeConfig;
-import com.liangshou.bitoj.model.dto.questionsubmit.JudgeInfo;
-import com.liangshou.bitoj.model.entity.Post;
-import com.liangshou.bitoj.model.entity.Question;
+import com.liangshou.bitoj.judge.codesandbox.model.JudgeInfo;
 import com.liangshou.bitoj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 题目提交封装类

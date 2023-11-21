@@ -60,7 +60,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
 
         // 创建时，参数不能为空
         if (add){
-            ThrowUtils.throwIf(StringUtils.isAnyBlank(title, content, tags), ErrorCode.PARAMS_ERROR);
+            ThrowUtils.throwIf(StringUtils.isAnyBlank(title, content), ErrorCode.PARAMS_ERROR);
         }
 
         // 有参数则校验
