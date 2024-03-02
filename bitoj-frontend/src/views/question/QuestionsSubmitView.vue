@@ -210,7 +210,7 @@ const router = useRouter();
 
 /**
  * 跳转到做题页面
- * @param question
+ * @param questionId
  */
 const toQuestionPage = (questionId: QuestionSubmitQueryRequest) => {
   router.push({

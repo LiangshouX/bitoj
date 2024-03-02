@@ -20,18 +20,18 @@
         <a-input v-model="form.userAccount" placeholder="请输入账号" />
       </a-form-item>
 
-      <!--      <a-form-item-->
-      <!--        required-->
-      <!--        field="userName"-->
-      <!--        label="用户名"-->
-      <!--        tooltip="用户名不少于 1 位"-->
-      <!--        :rules="[-->
-      <!--          { required: true, message: '用户名不能为空' },-->
-      <!--          { minLength: 4, message: '用户名长度不能低于1位' },-->
-      <!--        ]"-->
-      <!--      >-->
-      <!--        <a-input v-model="form.userAccount" placeholder="请输入用户名" />-->
-      <!--      </a-form-item>-->
+      <a-form-item
+        required
+        field="userName"
+        label="用户名"
+        tooltip="用户名不少于 1 位"
+        :rules="[
+          { required: true, message: '用户名不能为空' },
+          { minLength: 4, message: '用户名长度不能低于1位' },
+        ]"
+      >
+        <a-input v-model="form.userName" placeholder="请输入用户名" />
+      </a-form-item>
 
       <a-form-item
         required

@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 题目封装类
+ * 题目封装类，专门返回给前端的
  */
 @Data
 public class QuestionVO implements Serializable {
@@ -60,6 +60,11 @@ public class QuestionVO implements Serializable {
     @TableField(value = "acceptedNum")
     private Integer acceptedNum;
 
+    /**
+     * 判题用例（json 数组）
+     */
+    @TableField(value = "judgeCase")
+    private String judgeCase;
 
     /**
      * 判题配置（json 对象）

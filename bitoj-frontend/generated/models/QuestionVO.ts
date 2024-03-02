@@ -13,6 +13,7 @@ export type QuestionVO = {
     favourNum?: number;
     id?: number;
     isDelete?: number;
+    judgeCase?: string;
     judgeConfig?: JudgeConfig;
     submitNum?: number;
     tags?: Array<string>;

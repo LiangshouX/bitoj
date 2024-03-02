@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import gfm from "@bytemd/plugin-gfm";
 import { Editor } from "@bytemd/vue-next";
-import { withDefaults, defineProps } from "vue";
+import { withDefaults } from "vue";
 import locale from "bytemd/locales/zh_Hans.json";
 import gemoji from "@bytemd/plugin-gemoji";
 import math from "@bytemd/plugin-math";

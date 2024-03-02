@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import * as monaco from "monaco-editor";
-import { onMounted, ref, toRaw, watch, withDefaults, defineProps } from "vue";
+import { onMounted, ref, toRaw, watch, withDefaults } from "vue";
 
 const codeEditorRef = ref();
 const codeEditor = ref();

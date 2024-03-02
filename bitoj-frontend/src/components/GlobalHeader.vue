@@ -33,13 +33,13 @@
             </a-avatar>
           </template>
           <template v-else>
-            <a-avatar shape="circle">
+            <a-avatar shape="circle" :style="{ backgroundColor: '#3370ff' }">
               <IconUser />
             </a-avatar>
           </template>
         </template>
         <template v-else>
-          <a-avatar shape="circle" :style="{ backgroundColor: '#3370ff' }">
+          <a-avatar shape="circle" :style="{ backgroundColor: '#808080' }">
             <IconUser />
           </a-avatar>
         </template>

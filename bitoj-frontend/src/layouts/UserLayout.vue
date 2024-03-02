@@ -1,7 +1,7 @@
 <template>
   <div id="userLayout">
     <a-layout style="min-height: 100vh">
-      <a-layout-header class="header"> 用户中心页面 </a-layout-header>
+      <a-layout-header class="header"> 用户中心页面</a-layout-header>
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>

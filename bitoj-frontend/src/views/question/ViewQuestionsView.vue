@@ -70,7 +70,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, withDefaults, defineProps } from "vue";
+import { onMounted, ref, withDefaults } from "vue";
 import {
   QuestionControllerService,
   QuestionSubmitControllerService,
@@ -100,6 +100,8 @@ const loadData = async () => {
   );
   if (res.code === 0) {
     question.value = res.data;
+    console.log("ViewQuestionView.vue:\n");
+    console.log(res.data);
   } else {
     message.error("加载失败，" + res.message);
   }

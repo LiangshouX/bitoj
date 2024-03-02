@@ -48,7 +48,7 @@
         title="个人信息"
         style="max-width: 480px; margin: 0 auto"
       >
-        <a-form-item field="用户名称" label="账号 :">
+        <a-form-item field="用户名称" label="用户名 :">
           <a-input v-model="updateForm.userName" placeholder="请输入用户名称" />
         </a-form-item>
         <a-form-item field="邮箱" label="邮箱 :">

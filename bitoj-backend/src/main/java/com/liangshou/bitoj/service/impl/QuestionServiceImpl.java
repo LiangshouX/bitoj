@@ -85,6 +85,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
 
     /**
      * 获取查询包装类 （用户根据哪些字段查询；根据前端传来的请求对象，得到 MyBatis 框架支持的查询 QueryWrapper 类）
+     *
      * @param questionQueryRequest 请求对象
      * @return MyBatis 框架支持的查询 QueryWrapper 类
      */
@@ -134,7 +135,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
      */
     @Override
     public QuestionVO getQuestionVO(Question question, HttpServletRequest request) {
-        QuestionVO questionVO = new QuestionVO();
+        QuestionVO questionVO = QuestionVO.objToVo(question);
         // 1. 关联查询用户信息
         Long userId = question.getUserId();
         User user;

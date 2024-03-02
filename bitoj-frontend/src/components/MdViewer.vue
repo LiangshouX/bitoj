@@ -8,7 +8,7 @@ import highlight from "@bytemd/plugin-highlight";
 import { Viewer } from "@bytemd/vue-next";
 import gemoji from "@bytemd/plugin-gemoji";
 import math from "@bytemd/plugin-math";
-import { withDefaults, defineProps } from "vue";
+import { withDefaults } from "vue";
 
 /**
  * 定义组件属性类型

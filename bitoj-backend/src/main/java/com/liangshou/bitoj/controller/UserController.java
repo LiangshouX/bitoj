@@ -75,7 +75,7 @@ public class UserController {
         if(StringUtils.isBlank(userName)){
             userName = userAccount;
         }
-        long result = userService.userRegister(userAccount, userPassword, checkPassword);
+        long result = userService.userRegister(userAccount, userName,userPassword, checkPassword);
         return ResultUtils.success(result);
     }
 
