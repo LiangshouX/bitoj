@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CodeSandboxTest {
 
-    @Value("${codesandbox.type.example}")
+    @Value("${codesandbox.type.remote:example}")
     private String type;
 
     @Test

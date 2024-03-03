@@ -69,16 +69,20 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
         // 判断实体是否存在，根据 id 获取实体
         Question question = questionService.getById(questionId);
         if(question == null){
-            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR, "未找到题目，请重试！");
         }
 
         // 每个用户串行提交题目
         long userId = loginUser.getId();
         QuestionSubmit questionSubmit = new QuestionSubmit();
         questionSubmit.setUserId(userId);
-        questionSubmit.setCode(questionSubmit.getCode());
+        questionSubmit.setCode(questionSubmitAddRequest.getCode());
         questionSubmit.setLanguage(language);
         questionSubmit.setQuestionId(questionId);
+
+        // 针对 “用户代码" 的插入错误问题，打印检查 Code
+//         System.out.printf("\n\n\n\n\n\nQuestionSubmitService.doQuestionSubmit.questionSubmit.code:\n%s\n\n\n\n\n\n\n\n",
+//                 questionSubmit.getCode());
 
         // 设置初始状态
         questionSubmit.setJudgeInfo("{}");

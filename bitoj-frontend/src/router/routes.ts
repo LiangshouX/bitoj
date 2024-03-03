@@ -65,6 +65,7 @@ export const routes: Array<RouteRecordRaw> = [
     component: AddQuestionView,
     meta: {
       access: ACCESS_ENUM.ADMIN,
+      hideInMenu: true,
     },
   },
   {
@@ -92,7 +93,7 @@ export const routes: Array<RouteRecordRaw> = [
 
   {
     path: "/admin",
-    name: "仅管理员可见",
+    name: "ROOT",
     component: AdminView,
     meta: {
       access: ACCESS_ENUM.ADMIN,

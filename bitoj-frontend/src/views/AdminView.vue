@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="仅管理员可见页面" />
+    <HelloWorld msg="仅 ROOT 用户可见页面" />
   </div>
 </template>
 

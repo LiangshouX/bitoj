@@ -35,7 +35,7 @@ public class JudgeServiceImpl implements JudgeService {
     @Resource
     private JudgeManager judgeManager;
 
-    @Value("${codesandbox.type.remote}")
+    @Value("${codesandbox.type:example}")
     private String type;
 
 
@@ -47,14 +47,17 @@ public class JudgeServiceImpl implements JudgeService {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR, "提交信息不存在");
         }
         Long questionId = questionSubmit.getQuestionId();
+//        System.out.println("\n\n\n\n\n\n\n\n" + questionId + "\n\n\n\n\n\n\n\n");
         Question question = questionService.getById(questionId);
         if (question == null) {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR, "题目不存在");
         }
+
         // 2）如果题目提交状态不为等待中，就不用重复执行了
         if (!questionSubmit.getStatus().equals(QuestionSubmitStatusEnum.WAITING.getValue())) {
             throw new BusinessException(ErrorCode.OPERATION_ERROR, "题目正在判题中");
         }
+
         // 3）更改判题（题目提交）的状态为 “判题中”，防止重复执行
         QuestionSubmit questionSubmitUpdate = new QuestionSubmit();
         questionSubmitUpdate.setId(questionSubmitId);
@@ -63,6 +66,7 @@ public class JudgeServiceImpl implements JudgeService {
         if (!update) {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "题目状态更新错误");
         }
+
         // 4）调用沙箱，获取到执行结果
         CodeSandbox codeSandbox = CodeSandboxFactory.newInstance(type);
         codeSandbox = new CodeSandboxProxy(codeSandbox);

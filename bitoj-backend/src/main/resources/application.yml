@@ -92,7 +92,5 @@ cos:
     bucket: xxx
 # 代码沙箱配置
 codesandbox:
-  type:
-    example: example
-    remote: remote
-    thirdParty: thirdParty
+  type: example
+

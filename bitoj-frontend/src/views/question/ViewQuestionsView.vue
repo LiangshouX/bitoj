@@ -162,7 +162,7 @@ const changeCode = (value: string) => {
   max-width: 1600px;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(35, 7, 7, 0.21);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #viewQuestionView .arco-space-horizontal .arco-space-item {
