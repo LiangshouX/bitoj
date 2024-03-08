@@ -31,8 +31,8 @@ public class MainController {
     /**
      * 执行代码
      *
-     * @param executeCodeRequest
-     * @return
+     * @param executeCodeRequest 执行代码请求
+     * @return 执行结果
      */
     @PostMapping("/executeCode")
     ExecuteCodeResponse executeCode(@RequestBody ExecuteCodeRequest executeCodeRequest, HttpServletRequest request,

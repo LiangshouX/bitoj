@@ -13,6 +13,7 @@ import AboutView from "@/views/AboutView.vue";
 import UserInfoView from "@/views/user/UserInfoView.vue";
 import QuestionsView from "@/views/question/QuestionsView.vue";
 import ViewQuestionsView from "@/views/question/ViewQuestionsView.vue";
+import QuestionsSubmitView from "@/views/question/QuestionsSubmitView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -79,9 +80,15 @@ export const routes: Array<RouteRecordRaw> = [
 
   {
     path: "/",
-    name: "浏览题目",
+    name: "题库",
     component: QuestionsView,
   },
+  {
+    path: "/question_submit",
+    name: "提交记录",
+    component: QuestionsSubmitView,
+  },
+
   {
     path: "/noAuth",
     name: "无权限",

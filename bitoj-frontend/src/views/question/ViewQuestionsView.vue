@@ -100,8 +100,8 @@ const loadData = async () => {
   );
   if (res.code === 0) {
     question.value = res.data;
-    console.log("ViewQuestionView.vue:\n");
-    console.log(res.data);
+    // console.log("ViewQuestionView.vue:\n");
+    // console.log(res.data);
   } else {
     message.error("加载失败，" + res.message);
   }
@@ -134,7 +134,7 @@ const doSubmit = async () => {
   }
 
   // eslint-disable-next-line no-undef
-  const res = await QuestionSubmitControllerService.doQuestionSubmitUsingPost({
+  const res = await QuestionControllerService.doQuestionSubmitUsingPost({
     ...form.value,
     questionId: question.value.id,
   });

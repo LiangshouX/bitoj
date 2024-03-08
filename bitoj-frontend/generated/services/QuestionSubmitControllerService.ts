@@ -14,13 +14,14 @@ import { request as __request } from '../core/request';
 export class QuestionSubmitControllerService {
 
     /**
+     * @deprecated
      * doQuestionSubmit
      * @param questionSubmitAddRequest questionSubmitAddRequest
      * @returns BaseResponse_long_ OK
      * @returns any Created
      * @throws ApiError
      */
-    public static doQuestionSubmitUsingPost(
+    public static doQuestionSubmitUsingPost1(
 questionSubmitAddRequest: QuestionSubmitAddRequest,
 ): CancelablePromise<BaseResponse_long_ | any> {
         return __request(OpenAPI, {
@@ -36,13 +37,14 @@ questionSubmitAddRequest: QuestionSubmitAddRequest,
     }
 
     /**
+     * @deprecated
      * listQuestionSubmitByPage
      * @param questionSubmitQueryRequest questionSubmitQueryRequest
      * @returns BaseResponse_Page_QuestionSubmitVO_ OK
      * @returns any Created
      * @throws ApiError
      */
-    public static listQuestionSubmitByPageUsingPost(
+    public static listQuestionSubmitByPageUsingPost1(
 questionSubmitQueryRequest: QuestionSubmitQueryRequest,
 ): CancelablePromise<BaseResponse_Page_QuestionSubmitVO_ | any> {
         return __request(OpenAPI, {

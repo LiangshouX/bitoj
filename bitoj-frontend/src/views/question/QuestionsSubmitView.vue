@@ -121,12 +121,13 @@ const searchParams = ref<QuestionSubmitQueryRequest>({
 const colors = ["orange", "green", "blue", "red"];
 
 const loadData = async () => {
-  const res =
-    await QuestionSubmitControllerService.listQuestionSubmitByPageUsingPost({
+  const res = await QuestionControllerService.listQuestionSubmitByPageUsingPost(
+    {
       ...searchParams.value,
       sortField: "createTime",
       sortOrder: "descend",
-    });
+    }
+  );
   if (res.code === 0) {
     dataList.value = res.data.records;
     total.value = res.data.total;
