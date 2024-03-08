@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ad9c3d8-e6f6-4f9e-b2b9-46edb66f2bbf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/annotation/AuthCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/common/BaseResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/common/DeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/common/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/common/PageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/common/ResultUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/config/JsonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/constant/CommonConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/constant/FileConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/constant/UserConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/exception/ThrowUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/utils/NetUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java/com/liangshou/bitojbackendcommon/utils/SqlUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-gateway/src/main/java/com/liangshou/bitojbackendgateway/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-gateway/src/main/java/com/liangshou/bitojbackendgateway/filter/GlobalAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-gateway/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/BitojBackendJudgeServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/controller/inner/JudgeInnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/JudgeManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/JudgeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/JudgeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/codesandbox/CodeSandbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/codesandbox/CodeSandboxFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/codesandbox/CodeSandboxProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/codesandbox/impl/ExampleCodeSandbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/codesandbox/impl/RemoteCodeSandbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/codesandbox/impl/ThirdPartyCodeSandbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/strategy/DefaultJudgeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/strategy/JavaLanguageJudgeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/strategy/JudgeContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/judge/strategy/JudgeStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/rabbitmq/InitRabbitMq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/rabbitmq/InitRabbitMqBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java/com/liangshou/bitojbackendjudgeservice/rabbitmq/MyMessageConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/codesandbox/ExecuteCodeRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/codesandbox/ExecuteCodeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/codesandbox/JudgeInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/file/UploadFileRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/question/JudgeCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/question/JudgeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/question/QuestionAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/question/QuestionEditRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/question/QuestionQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/question/QuestionUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/questionsubmit/QuestionSubmitAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/questionsubmit/QuestionSubmitQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/user/UserAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/user/UserLoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/user/UserQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/user/UserRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/user/UserUpdateMyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/dto/user/UserUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/entity/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/entity/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/entity/QuestionSubmit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/enums/FileUploadBizEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/enums/JudgeInfoMessageEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/enums/QuestionSubmitLanguageEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/enums/QuestionSubmitStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/enums/UserRoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/vo/LoginUserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/vo/PostVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/vo/QuestionSubmitVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/vo/QuestionVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java/com/liangshou/bitojbackendmodel/model/vo/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/controller/QuestionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/controller/inner/QuestionInnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/mapper/QuestionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/mapper/QuestionSubmitMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/rabbitmq/MyMessageProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/service/QuestionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/service/QuestionSubmitService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/service/impl/QuestionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java/com/liangshou/bitojbackendquestionservice/service/impl/QuestionSubmitServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-service-client/src/main/java/com/liangshou/bitojbackendserviceclient/service/JudgeFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-service-client/src/main/java/com/liangshou/bitojbackendserviceclient/service/QuestionFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-service-client/src/main/java/com/liangshou/bitojbackendserviceclient/service/UserFeignClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java/com/liangshou/bitojbackenduserservice/BitojBackendUserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java/com/liangshou/bitojbackenduserservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java/com/liangshou/bitojbackenduserservice/controller/inner/UserInnerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java/com/liangshou/bitojbackenduserservice/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java/com/liangshou/bitojbackenduserservice/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java/com/liangshou/bitojbackenduserservice/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/docker-compose.env.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/docker-compose.service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/mysql-init/create_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bitoj-backend-microservice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/开发日志-08-代码沙箱优化与微服务改造.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/common/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/common/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/controller/QuestionSubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/controller/QuestionSubmitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/judge/codesandbox/impl/RemoteCodeSandbox.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/main/java/com/liangshou/bitoj/judge/codesandbox/impl/RemoteCodeSandbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-backend/src/test/java/com/liangshou/bitoj/judge/codesandbox/CodeSandboxTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-backend/src/test/java/com/liangshou/bitoj/judge/codesandbox/CodeSandboxTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/JavaCodeSandboxTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/JavaCodeSandboxTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/JavaNativeCodeSandboxOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/JavaNativeCodeSandboxOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/SimpleCompute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/java/com/liangshou/bitojcodesandbox/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-code-sandbox/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-code-sandbox/src/test/java/com/yupi/yuojcodesandbox/YuojCodeSandboxApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-code-sandbox/src/test/java/com/liangshou/bitojcodesandbox/BitojCodeSandboxApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-frontend/generated/core/OpenAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-frontend/generated/core/OpenAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-frontend/generated/services/QuestionControllerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-frontend/generated/services/QuestionControllerService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-frontend/generated/services/QuestionSubmitControllerService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-frontend/generated/services/QuestionSubmitControllerService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-frontend/src/router/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-frontend/src/router/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-frontend/src/views/question/QuestionsSubmitView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-frontend/src/views/question/QuestionsSubmitView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bitoj-frontend/src/views/question/ViewQuestionsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/bitoj-frontend/src/views/question/ViewQuestionsView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/开发日志-06-代码沙箱原生实现.md" beforeDir="false" afterPath="$PROJECT_DIR$/开发日志-06-代码沙箱原生实现.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/开发日志-07-代码沙箱Docker实现.md" beforeDir="false" afterPath="$PROJECT_DIR$/开发日志-07-代码沙箱Docker实现.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2dLd4wNKenxk4ACWsVZW6cCmj7t" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/OJ",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\ProgramFiles\\Jetbrains\\IDEA\\IntelliJ IDEA 2023.2.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.MainApplication">
+    <configuration name="BitojCodeSandboxApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bitoj-code-sandbox" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.liangshou.bitojcodesandbox.BitojCodeSandboxApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="bitoj-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.liangshou.bitoj.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ad9c3d8-e6f6-4f9e-b2b9-46edb66f2bbf" name="Changes" comment="" />
+      <created>1709791104954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709791104954</updated>
+      <workItem from="1709791107193" duration="38000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

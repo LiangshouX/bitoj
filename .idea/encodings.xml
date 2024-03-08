@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-judge-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-question-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-service-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-service-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/bitoj-backend-user-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend-microservice/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-backend/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bitoj-code-sandbox/src/main/java" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,54 @@
+version: '3'
+services:
+  bitoj-backend-gateway:
+    container_name: bitoj-backend-gateway
+    build:
+      context: ./bitoj-backend-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8101:8101"
+    networks:
+      - mynetwork
+
+  bitoj-backend-user-service:
+    container_name: bitoj-backend-user-service
+    build:
+      context: ./bitoj-backend-user-service
+      dockerfile: Dockerfile
+    ports:
+      - "8102:8102"
+    networks:
+      - mynetwork
+    depends_on:
+      - bitoj-backend-gateway
+
+  bitoj-backend-question-service:
+    container_name: bitoj-backend-question-service
+    build:
+      context: ./bitoj-backend-question-service
+      dockerfile: Dockerfile
+    ports:
+      - "8103:8103"
+    networks:
+      - mynetwork
+    depends_on:
+      - bitoj-backend-user-service
+      - bitoj-backend-gateway
+
+  bitoj-backend-judge-service:
+    container_name: bitoj-backend-judge-service
+    build:
+      context: ./bitoj-backend-judge-service
+      dockerfile: Dockerfile
+    ports:
+      - "8104:8104"
+    networks:
+      - mynetwork
+    depends_on:
+      - bitoj-backend-user-service
+      - bitoj-backend-question-service
+      - bitoj-backend-gateway
+
+# 网络，不定义的话就是默认网络
+networks:
+  mynetwork:

@@ -1,10 +1,10 @@
-package com.liangshou.bitojcodesandbox;
+package com.liangshou.bitojbackenduserservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YuojCodeSandboxApplicationTests {
+class BitojBackendUserServiceApplicationTests {
 
     @Test
     void contextLoads() {
