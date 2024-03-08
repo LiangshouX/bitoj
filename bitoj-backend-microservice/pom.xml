@@ -16,6 +16,7 @@
         <module>bitoj-backend-question-service</module>
         <module>bitoj-backend-user-service</module>
         <module>bitoj-backend-judge-service</module>
+        <module>bitoj-code-sandbox</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>

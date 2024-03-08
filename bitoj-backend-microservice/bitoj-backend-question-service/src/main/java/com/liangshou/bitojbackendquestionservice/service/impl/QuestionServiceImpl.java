@@ -127,7 +127,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
      */
     @Override
     public QuestionVO getQuestionVO(Question question, HttpServletRequest request) {
-        QuestionVO questionVO = new QuestionVO();
+        QuestionVO questionVO = QuestionVO.objToVo(question);
         // 与查询用户信息相关联
         Long userId = questionVO.getUserId();
         User user = null;
@@ -173,6 +173,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
 
             return questionVO;
         }).collect(Collectors.toList());
+        questionVOPage.setRecords(questionVOList);
         return questionVOPage;
     }
 

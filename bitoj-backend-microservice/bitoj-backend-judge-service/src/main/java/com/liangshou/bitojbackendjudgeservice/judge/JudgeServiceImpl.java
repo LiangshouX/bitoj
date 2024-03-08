@@ -75,6 +75,11 @@ public class JudgeServiceImpl implements JudgeService {
                 .build();
         ExecuteCodeResponse executeCodeResponse = codeSandbox.executeCode(executeCodeRequest);
         List<String> outputList = executeCodeResponse.getOutputList();
+//        System.out.println("\n\n\n\n");
+//        for(String output:outputList){
+//            System.out.println(output);
+//        }
+//        System.out.println("\n\n\n\n");
         // 5）根据沙箱的执行结果，设置题目的判题状态和信息
         JudgeContext judgeContext = new JudgeContext();
         judgeContext.setJudgeInfo(executeCodeResponse.getJudgeInfo());

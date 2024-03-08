@@ -1,5 +1,6 @@
 package com.liangshou.bitojbackendjudgeservice;
 
+import com.liangshou.bitojbackendjudgeservice.rabbitmq.InitRabbitMq;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -19,7 +20,7 @@ public class BitojBackendJudgeServiceApplication {
 
     public static void main(String[] args) {
         // 初始化消息队列，先注释掉，改用 Bean 的方式初始化消息队列（InitRabbitMqBean.java）
-        // InitRabbitMq.doInit();
+         InitRabbitMq.doInit();
         final ConfigurableApplicationContext ctx = SpringApplication.run(BitojBackendJudgeServiceApplication.class, args);
 
 //        final String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
