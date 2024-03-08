@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -19,7 +20,12 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class BitojBackendQuestionServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BitojBackendQuestionServiceApplication.class, args);
+
+        final ConfigurableApplicationContext ctx = SpringApplication.run(BitojBackendQuestionServiceApplication.class, args);
+
+
+//        final String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
+//        Arrays.stream(beanDefinitionNames).forEach(System.out::println);
     }
 
 }
