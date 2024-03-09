@@ -1,21 +1,12 @@
-<div style="display: flex; justify-content: center;">
-    <img src="docs/imgs/logo.png" style="zoom:80%; vertical-align: middle;" />
+<img src="docs/imgs/logo.png" style="zoom:80%;" align="center"/>
+
+<div  style="display: flex; justify-content: center;">
+    <img src="https://img.shields.io/badge/java-1.8-blue?logo=java&style=flat-square" alt="Java 1.8" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/spring_boot-2.6.13-green?logo=springboot&style=flat-square" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/spring_cloud-2021.0.5-brightgreen?logo=spring-cloud&style=flat-square" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/vue.js-3.3.8-brightgreen?logo=vue.js&style=flat-square" style="vertical-align: middle;"/> 
 </div>
 
-<div style="display: flex; justify-content: center;">
-    <div>
-        <img src="https://img.shields.io/badge/java-1.8-blue?logo=java&style=flat-square" alt="Java 1.8" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/spring_boot-2.6.13-green?logo=springboot&style=flat-square" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/spring_cloud-2021.0.5-brightgreen?logo=spring-cloud&style=flat-square" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/vue.js-3.3.8-brightgreen?logo=vue.js&style=flat-square" style="vertical-align: middle;"/> 
-    </div>
-</div>
 <div style="display: flex; justify-content: center;">
     <div>
         <img src="https://img.shields.io/badge/mysql-8.0.34-lightblue?logo=mysql&style=flat-square" alt="MySql 8.0.34" align="center" style="vertical-align: middle;"/> 
@@ -29,7 +20,8 @@
     <div>
         <img src="https://img.shields.io/badge/redis-7.0.9-red?logo=redis&style=flat-square"/> 
     </div>
-</div>
+</div>
+
 <div style="display: flex; justify-content: center;">
     <div>
         <img src="https://img.shields.io/badge/knife4j-4.3.0-yellow?logo=data:image/svg+xml;base64,..." style="vertical-align: middle;"/> 
@@ -49,8 +41,7 @@
     <div>
         <img src="https://img.shields.io/badge/docker_java-3.3.0-darkgrey?logo=docker&style=flat-square" style="vertical-align: middle;"/> 
     </div>
-</div>
-
+</div>
 
 ​    
 
@@ -80,7 +71,7 @@
 * Redis
 * NodeJs
 
-## 拉取项目到本地
+### 拉取项目到本地
 
 使用克隆命令：
 
@@ -94,13 +85,13 @@ git clone https://github.com/LiangshouX/bitoj.git
 
 
 
-## 启动后端项目
+### 启动后端项目
 
 后端项目有两种启动方式，您可以选择启动后端微服务 `bitoj-backend-microservice`，或者启动后端单体项目 `bitoj-backend`。
 
 > :warning: 两种启动方式均需要启动代码沙箱 `bitoj-backend-microservice/bitoj-code-sandbox` 
 
-### 方式一：启动后端单体项目
+#### 方式一：启动后端单体项目
 
 1. 刷新 Maven 配置，等待依赖安装
 
@@ -146,7 +137,7 @@ git clone https://github.com/LiangshouX/bitoj.git
 
 
 
-### 方式二：启动后端微服务项目
+#### 方式二：启动后端微服务项目
 
 1. 启动 Nacos 服务
 
@@ -172,7 +163,7 @@ git clone https://github.com/LiangshouX/bitoj.git
 
 
 
-## 启动前端项目
+### 启动前端项目
 
 运行前端项目需要安装 vue 框架，如未安装，请参考本项目 `./docs/开发日志-01-概述 & 前端项目初始化.md` 有关前端初始化-环境配置部分的内容。
 
@@ -198,9 +189,85 @@ npm run serve
 
 
 
+## 主要涉及的模块
+
+用户、前端页面、后端控制(Controller)、题目服务(QuestionService)、消息队列(MQ)、判题服务(JudgeService)、代码沙箱(CodeSandbox)、数据库(DB)、用户服务(UserService)
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant UI 
+    participant QuestionService
+    participant MQ 
+    participant JudgeService 
+    participant CodeSandbox 
+    participant UserService
+    participant DB
+  	User ->> UI: 0. 注册、<br>登录
+  	UI ->> UserService: 1.用户注册登录请求
+  	UserService ->> DB: 2.用户注册、<br>登录信息
+  	DB -->> UserService: 3.反馈执行结果
+  	UserService -->> UI: 4. 反馈执行结果
+  	
+  	User ->> UI: 5.浏览题库、<br> 在线做题
+  	UI ->> QuestionService: 6.相关题目请求
+  	QuestionService ->> DB: 7.查询题目信息
+  	DB -->> QuestionService: 8.返回题目信息
+  	QuestionService -->> UI: 9.返回题目信息
+  	QuestionService ->> MQ: 10.提交判题任务
+  	MQ -->> QuestionService: 11.返回提交信息<br>成功或失败
+  	MQ ->> JudgeService: 12.下发判题任务
+  	JudgeService ->> CodeSandbox: 13.发送代码、<br>用例等
+  	loop RUN
+  		CodeSandbox ->> CodeSandbox: 14.编译、运行代码
+  	end
+    CodeSandbox -->> JudgeService: 15.返回代码<br>执行结果
+```
 
 
 
+## 项目核心业务流程：
+
+1. {用户}通过{前端页面}访问系统，执行<注册>、<登录>等操作，相关请求发送给  {后端控制}，由 {用户服务(UserService)}  向数据库发起请求，获取到用户的注册登录信息后返回给 {后端控制}
+2. {用户} 通过 {前端页面} 访问系统，进行<浏览题库>、<在线做题/提交代码>等操作，相关请求发送给 {后端控制}，
+3. 对于 <浏览题库> 请求，{题目服务(QuestionService)} 则向{数据库}查询，{数据库} 返回题目信息；
+4. 对于 <在线做题/提交代码>请求，{题目服务(QuestionService)} 首先将 《判题任务》提交给{消息队列(MQ)}，同时向{数据库}中写记录，{消息队列(MQ)} 向 {题目服务(QuestionService)} 返回提交信息成功或失败
+5. {消息队列(MQ)} 向 {题目服务(QuestionService)} 返回提交信息成功后，将判题任务下发到 {判题服务(JudgeService)}
+6.  {判题服务(JudgeService)}  收集、处理判题任务，发送到 {代码沙箱(CodeSandbox)}，由 {代码沙箱(CodeSandbox)} 进行编译、运行代码等
+7. {代码沙箱(CodeSandbox)} 将执行结果返回给 {判题服务(JudgeService)}，{判题服务(JudgeService)} 根据规则判断执行信息是否符合预期，同时向 {数据库(DB)} 更新判题结果
+8. {用户} 通过 {前端页面} 执行查询提交记录、搜索记录等操作，{前端页面} 通过{题目服务(QuestionService)} 向 {数据库(DB)} 发起请求，数据库将数据反馈给 {前端页面}
+
+
+
+
+
+
+
+# 微服务设计
+
+
+
+
+
+
+
+
+
+# 部署上线
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 后续扩展
 
 
 
