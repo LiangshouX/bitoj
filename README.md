@@ -1,4 +1,4 @@
-<img src="docs/imgs/logo.png" style="zoom:80%;" />
+<img src="docs/imgs/logo.png" style="zoom:80%;" align="center"/>
 
 <div  style="display: flex; justify-content: center;">
     <img src="https://img.shields.io/badge/java-1.8-blue?logo=java&style=flat-square" alt="Java 1.8" style="vertical-align: middle;"/> 
