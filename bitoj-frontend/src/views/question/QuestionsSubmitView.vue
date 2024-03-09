@@ -99,7 +99,6 @@
 <script setup lang="ts">
 import { onMounted, ref, watchEffect } from "vue";
 import {
-  QuestionSubmitControllerService,
   QuestionControllerService,
   QuestionSubmitQueryRequest,
 } from "../../../generated";
