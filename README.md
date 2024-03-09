@@ -7,41 +7,19 @@
     <img src="https://img.shields.io/badge/vue.js-3.3.8-brightgreen?logo=vue.js&style=flat-square" style="vertical-align: middle;"/> 
 </div>
 
-<div style="display: flex; justify-content: center;">
-    <div>
-        <img src="https://img.shields.io/badge/mysql-8.0.34-lightblue?logo=mysql&style=flat-square" alt="MySql 8.0.34" align="center" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/rabbitmq-3.12.0-orange?logo=rabbitmq&style=flat-square" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/nacos-2.2.0-purple?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCI+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMTcuNSAyNS4ybDEzLjUgMTMuNSAxMy41LTEzLjUtMTMuNS0xMy41eiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTMwIDMwYTIgMiAwIDAxLTItMiAyIDIgMCAwMS0yIDJ2Nmgydi02em0wLTloLTR2LTRoNFYzMnoiIGZpbGw9IiMwMDAiLz4KPC9zdmc+" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/redis-7.0.9-red?logo=redis&style=flat-square"/> 
-    </div>
-</div>
-
-<div style="display: flex; justify-content: center;">
-    <div>
-        <img src="https://img.shields.io/badge/knife4j-4.3.0-yellow?logo=data:image/svg+xml;base64,..." style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/mybatis-3.5.2-blueviolet?logo=mybatis&style=flat-square" style="vertical-align: middle;"/> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/gson-2.9.1-gray?logo=gson&style=flat-square"/ style="vertical-align: middle;"> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/easyexcel-3.1.1-blue?logo=data:image/svg+xml;base64,..."/ style="vertical-align: middle;"> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/hutool-5.8.8-success?logo=data:image/svg+xml;base64,..."/ style="vertical-align: middle;"> 
-    </div>
-    <div>
-        <img src="https://img.shields.io/badge/docker_java-3.3.0-darkgrey?logo=docker&style=flat-square" style="vertical-align: middle;"/> 
-    </div>
-</div>
+<div  style="display: flex; justify-content: center;">
+    <img src="https://img.shields.io/badge/mysql-8.0.34-lightblue?logo=mysql&style=flat-square" alt="MySql 8.0.34" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/rabbitmq-3.12.0-orange?logo=rabbitmq&style=flat-square" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/nacos-2.2.0-purple?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCI+CiAgICA8cGF0aCBkPSJNMCAwaDQ4djQ4SDB6IiBmaWxsPSJub25lIi8+CiAgICA8cGF0aCBkPSJNMTcuNSAyNS4ybDEzLjUgMTMuNSAxMy41LTEzLjUtMTMuNS0xMy41eiIgZmlsbD0iI2ZmZiIvPgogICAgPHBhdGggZD0iTTMwIDMwYTIgMiAwIDAxLTItMiAyIDIgMCAwMS0yIDJ2Nmgydi02em0wLTloLTR2LTRoNFYzMnoiIGZpbGw9IiMwMDAiLz4KPC9zdmc+" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/redis-7.0.9-red?logo=redis&style=flat-square"/> 
+</div>
+<div  style="display: flex; justify-content: center;">
+    <img src="https://img.shields.io/badge/knife4j-4.3.0-yellow?logo=data:image/svg+xml;base64,..." style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/mybatis-3.5.2-blueviolet?logo=mybatis&style=flat-square" style="vertical-align: middle;"/> 
+    <img src="https://img.shields.io/badge/gson-2.9.1-gray?logo=gson&style=flat-square"/ style="vertical-align: middle;"> 
+    <img src="https://img.shields.io/badge/easyexcel-3.1.1-blue?logo=data:image/svg+xml;base64,..."/ style="vertical-align: middle;"> 
+    <img src="https://img.shields.io/badge/hutool-5.8.8-success?logo=data:image/svg+xml;base64,..."/ style="vertical-align: middle;"> 
+    <img src="https://img.shields.io/badge/docker_java-3.3.0-darkgrey?logo=docker&style=flat-square" style="vertical-align: middle;"/> 
 
 ​    
 
@@ -187,11 +165,7 @@ npm run serve
 
 # 项目架构与模块设计
 
-
-
-## 主要涉及的模块
-
-用户、前端页面、后端控制(Controller)、题目服务(QuestionService)、消息队列(MQ)、判题服务(JudgeService)、代码沙箱(CodeSandbox)、数据库(DB)、用户服务(UserService)
+本项目的核心业务流程如下图：
 
 ```mermaid
 sequenceDiagram
@@ -222,20 +196,14 @@ sequenceDiagram
   		CodeSandbox ->> CodeSandbox: 14.编译、运行代码
   	end
     CodeSandbox -->> JudgeService: 15.返回代码<br>执行结果
+    loop Judge
+  		JudgeService ->> JudgeService: 16.根据规则判断<br>是否符合预期
+  	end
+  	JudgeService ->> DB: 17.更新数据库判题结果
+  	
+  	UI ->> DB: 18.刷新页面、查询等
+  	DB -->> UI: 19.返回提交题目的状态
 ```
-
-
-
-## 项目核心业务流程：
-
-1. {用户}通过{前端页面}访问系统，执行<注册>、<登录>等操作，相关请求发送给  {后端控制}，由 {用户服务(UserService)}  向数据库发起请求，获取到用户的注册登录信息后返回给 {后端控制}
-2. {用户} 通过 {前端页面} 访问系统，进行<浏览题库>、<在线做题/提交代码>等操作，相关请求发送给 {后端控制}，
-3. 对于 <浏览题库> 请求，{题目服务(QuestionService)} 则向{数据库}查询，{数据库} 返回题目信息；
-4. 对于 <在线做题/提交代码>请求，{题目服务(QuestionService)} 首先将 《判题任务》提交给{消息队列(MQ)}，同时向{数据库}中写记录，{消息队列(MQ)} 向 {题目服务(QuestionService)} 返回提交信息成功或失败
-5. {消息队列(MQ)} 向 {题目服务(QuestionService)} 返回提交信息成功后，将判题任务下发到 {判题服务(JudgeService)}
-6.  {判题服务(JudgeService)}  收集、处理判题任务，发送到 {代码沙箱(CodeSandbox)}，由 {代码沙箱(CodeSandbox)} 进行编译、运行代码等
-7. {代码沙箱(CodeSandbox)} 将执行结果返回给 {判题服务(JudgeService)}，{判题服务(JudgeService)} 根据规则判断执行信息是否符合预期，同时向 {数据库(DB)} 更新判题结果
-8. {用户} 通过 {前端页面} 执行查询提交记录、搜索记录等操作，{前端页面} 通过{题目服务(QuestionService)} 向 {数据库(DB)} 发起请求，数据库将数据反馈给 {前端页面}
 
 
 
