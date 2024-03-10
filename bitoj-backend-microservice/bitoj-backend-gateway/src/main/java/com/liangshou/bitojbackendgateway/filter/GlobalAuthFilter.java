@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 
 @Component
 public class GlobalAuthFilter implements GlobalFilter, Ordered {
-    private AntPathMatcher antPathMatcher = new AntPathMatcher();
+    private final AntPathMatcher antPathMatcher = new AntPathMatcher();
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
